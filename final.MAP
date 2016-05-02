@@ -1,0 +1,126 @@
+LARM LINKER/LOCATER V2.41                                                               05/01/2016  18:29:57  PAGE 1
+
+
+LARM LINKER/LOCATER V2.41, INVOKED BY:
+C:\KEIL\ARM\BIN\LA.EXE Startup.obj, final.obj TO final CASE CLASSES (DATA (0X40000000-0X40007FFF), CODE (0X0-0X7FFFF), C
+>> ONST (0X0-0X7FFFF))
+
+
+CPU MODE: LITTLE ENDIAN
+
+
+INPUT MODULES INCLUDED:
+  Startup.obj (STARTUP)
+         COMMENT TYPE 0: AA V2.41
+  final.obj (final)
+         COMMENT TYPE 0: CARM V2.41
+  C:\KEIL\ARM\LIB\CAL.LIB (FIQ)
+         COMMENT TYPE 0: AA V2.40b
+  C:\KEIL\ARM\LIB\CAL.LIB (IRQ)
+         COMMENT TYPE 0: AA V2.40b
+  C:\KEIL\ARM\LIB\CAL.LIB (DABT)
+         COMMENT TYPE 0: AA V2.40b
+  C:\KEIL\ARM\LIB\CAL.LIB (PABT)
+         COMMENT TYPE 0: AA V2.40b
+  C:\KEIL\ARM\LIB\CAL.LIB (SWI)
+         COMMENT TYPE 0: AA V2.40b
+  C:\KEIL\ARM\LIB\CAL.LIB (UNDEF)
+         COMMENT TYPE 0: AA V2.40b
+  C:\KEIL\ARM\LIB\CAL.LIB (atoi)
+         COMMENT TYPE 0: CARM V2.40f
+  C:\KEIL\ARM\LIB\CAL.LIB (isdigit)
+         COMMENT TYPE 0: CARM V2.40f
+  C:\KEIL\ARM\LIB\CAL.LIB (isspace)
+         COMMENT TYPE 0: CARM V2.40f
+  C:\KEIL\ARM\LIB\CAL.LIB (UDIV)
+         COMMENT TYPE 0: AA V2.40b
+
+
+ACTIVE MEMORY CLASSES OF MODULE:  final (STARTUP)
+
+BASE       START      END        USED       MEMORY CLASS
+========================================================
+00000000H  40000000H  40007FFFH  00000494H  DATA
+00000000H  00000000H  0007FFFFH  00000778H  CODE
+00000000H  00000000H  0007FFFFH  00000036H  CONST
+
+
+
+MEMORY MAP OF MODULE:  final (STARTUP)
+
+START      STOP       LENGTH    ALIGN  RELOC  MEMORY CLASS   SEGMENT NAME
+=========================================================================
+00000000H  0000010FH  00000110H     4  AT..   CODE           STARTUPCODE
+00000110H  0000012DH  0000001EH     4  UNIT   CONST          ?CON?final
+0000012EH  0000012FH  00000002H   ---  ---    **GAP**
+00000130H  0000013FH  00000010H     4  UNIT   CONST          ?C_CLRSEG
+00000140H  00000147H  00000008H     4  UNIT   CONST          ?C_INITSEG
+00000148H  0000016BH  00000024H     4  UNIT   CODE           ?PR?wait_us?T?final
+0000016CH  0000017FH  00000014H     4  UNIT   CODE           ?PR?GPIO_Port_Low?T?final
+00000180H  00000193H  00000014H     4  UNIT   CODE           ?PR?GPIO_Port_High?T?final
+00000194H  000001BBH  00000028H     4  UNIT   CODE           ?PR?GPIO_Set_Port?T?final
+000001BCH  00000213H  00000058H     4  UNIT   CODE           ?PR?disp_cmd?T?final
+00000214H  0000026BH  00000058H     4  UNIT   CODE           ?PR?disp_write?T?final
+0000026CH  0000031FH  000000B4H     4  UNIT   CODE           ?PR?lcd_init?T?final
+00000320H  00000343H  00000024H     4  UNIT   CODE           ?PR?Delay?T?final
+00000344H  00000367H  00000024H     4  UNIT   CODE           ?PR?Delay2?T?final
+00000368H  0000039FH  00000038H     4  UNIT   CODE           ?PR?display?T?final
+000003A0H  00000573H  000001D4H     4  UNIT   CODE           ?PR?hex2char?T?final
+00000574H  0000068FH  0000011CH     4  UNIT   CODE           ?PR?main?final
+LARM LINKER/LOCATER V2.41                                                             05/01/2016  18:29:57  PAGE 2
+
+
+00000690H  00000693H  00000004H     4  UNIT   CODE           ?C?FIQ
+00000694H  00000697H  00000004H     4  UNIT   CODE           ?C?IRQ
+00000698H  0000069BH  00000004H     4  UNIT   CODE           ?C?DABT
+0000069CH  0000069FH  00000004H     4  UNIT   CODE           ?C?PABT
+000006A0H  000006A7H  00000008H     4  UNIT   CODE           ?C?UNDEF
+000006A8H  0000071BH  00000074H     4  UNIT   CODE           ?PR?atoi?T?atoi
+0000071CH  0000073FH  00000024H     4  UNIT   CODE           ?PR?isdigit?T?isdigit
+00000740H  00000767H  00000028H     4  UNIT   CODE           ?PR?isspace?T?isspace
+00000768H  000007AFH  00000048H     4  UNIT   CODE           ?PR?C?UDIV
+000007B0H  3FFFFFFFH  3FFFF850H   ---  ---    **GAP**
+40000000H  4000048FH  00000490H     4  UNIT   DATA           STACK
+40000490H  40000493H  00000004H     4  UNIT   DATA           ?DT0?final
+
+
+
+PUBLIC SYMBOLS OF MODULE:  final (STARTUP)
+
+      VALUE      CLASS    TYPE      PUBLIC SYMBOL NAME
+      ================================================
+      00000130H  ---      ---       ?C?CLRTAB
+      00000574H  ---      ---       ?C?INIT
+      00000140H  ---      ---       ?C?INITTAB
+      0000076CH  CODE     ---       ?C?UDIV?A
+      00000768H  CODE     ---       ?C?UDIV?T
+      00000698H  CODE     ---       DAbt_Handler?A
+      00000344H  CODE     ---       Delay2?T
+      00000320H  CODE     ---       Delay?T
+      00000690H  CODE     ---       FIQ_Handler?A
+      00000180H  CODE     ---       GPIO_Port_High?T
+      0000016CH  CODE     ---       GPIO_Port_Low?T
+      00000194H  CODE     ---       GPIO_Set_Port?T
+      00000694H  CODE     ---       IRQ_Handler?A
+      0000069CH  CODE     ---       PAbt_Handler?A
+      000006A0H  CODE     ---       SWI_Handler?A
+      000006A4H  CODE     ---       Undef_Handler?A
+      00000000H  CODE     ---       __startup
+      000006A8H  CODE     ---       atoi?A
+      000006B4H  CODE     ---       atoi?T
+      000001BCH  CODE     ---       disp_cmd?T
+      00000214H  CODE     ---       disp_write?T
+      00000368H  CODE     ---       display?T
+      000000F0H  CODE     ---       exit?A
+      000000F4H  CODE     ---       exit?T
+      000003A0H  CODE     ---       hex2char?T
+      0000071CH  CODE     ---       isdigit?A
+      00000728H  CODE     ---       isdigit?T
+      00000740H  CODE     ---       isspace?A
+      0000074CH  CODE     ---       isspace?T
+      0000026CH  CODE     ---       lcd_init?T
+      000005A8H  CODE     ---       main
+      00000148H  CODE     ---       wait_us?T
+
+Program Size: data=1172 const=54 code=1912
+LARM RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
