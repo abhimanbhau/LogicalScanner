@@ -30,6 +30,23 @@ void Delay2(void);
 #define LONG_DELAY 2000
 #define SHORT_DELAY 400
 
+
+// Code refactor
+
+int range[31] = 
+{
+	100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+	1500, 1600, 1700, 1800, 1900, 2000, 2100, 2200, 2300, 2400, 2500, 2600, 2700,
+	2800, 2900, 3000, 3100
+};
+
+char range2char[31] = 
+{
+	'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 
+	'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 
+	'Y', 'Z', '1', '2', '3', '4', '5' 
+};
+
 // Generic Delay Function
 void Delay(int delay)
 {
@@ -132,74 +149,18 @@ void display(unsigned char arr[])
 char hex2char(unsigned char arr[])
 {
   int num = atoi(arr);
-  if(num <= 100)
-  return 'A';
-  else if(num <= 200)
-  return 'B';
-  else if(num <= 300)
-  return 'C';
-  else if(num <= 400)
-  return 'D';
-  else if(num <= 500)
-  return 'E';
-  else if(num <= 600)
-  return 'F';
-  else if(num <= 700)
-  return 'G';
-  else if(num <= 800)
-  return 'H';
-  else if(num <= 900)
-  return 'I';
-  else if(num <= 1000)
-  return 'J';
-  else if(num <= 1100)
-  return 'K';
-  else if(num <= 1200)
-  return 'L';
-  else if(num <= 1300)
-  return 'M';
-  else if(num <= 1400)
-  return 'N';
-  else if(num <= 1500)
-  return 'O';
-  else if(num <= 1600)
-  return 'P';
-  else if(num <= 1700)
-  return 'Q';
-  else if(num <= 1800)
-  return 'R';
-  else if(num <= 1900)
-  return 'S';
-  else if(num <= 2000)
-  return 'T';
-  else if(num <= 2100)
-  return 'U';
-  else if(num <= 2200)
-  return 'V';
-  else if(num <= 2300)
-  return 'W';
-  else if(num <= 2400)
-  return 'X';
-  else if(num <= 2500)
-  return 'Y';
-  else if(num <= 2600)
-  return 'Z';
-  else if(num <= 2700)
-  return '1';
-  else if(num <= 2800)
-  return '2';
-  else if(num <= 2900)
-  return '3';
-  else if(num <= 3000)
-  return '4';
-  else if(num <= 3100)
-  return '5';
-  else if(num <= 3200)
-  return '6';
-  else if(num <= 3300)
-  return '7';
-  else
-  return '#';
+  
+  // Else-if chain refactoring
+  int i = 0;
+  for(i, i < 32; ++i)
+  {
+  	if(num <= range[i])
+  	{
+  		return range2char[i];
+  	}
+  	else
+  		continue;
+  }
 }
 
 int main(void)
